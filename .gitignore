@@ -1,0 +1,18 @@
+node_modules/
+.vscode/
+front/node_modules/
+front/.DS_Store
+front/dist/
+front/npm-debug.log*
+front/yarn-debug.log*
+front/yarn-error.log*
+front/test/unit/coverage/
+front/test/e2e/reports/
+front/selenium-debug.log
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln

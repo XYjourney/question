@@ -47,7 +47,7 @@ export default {
       compFormatter: 'TagSelect'
     },
     {
-      width: 300,
+      width: 100,
       prop: 'other',
       label: '其他',
       align: 'left',
@@ -57,7 +57,7 @@ export default {
       width: 300,
       prop: 'comments',
       label: '评论',
-      visible: true,
+      visible: false,
       align: 'left',
       valueFormatter: (row, column, value) => (value || '--')
     },

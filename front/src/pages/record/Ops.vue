@@ -44,37 +44,50 @@ export default {
         modify: false,
         del: false
       },
-      recordInfo: {
-        name: '',
-        interests: [],
-        comments: '',
-        other: '',
-        id: ''
-      },
-      interests
+      // recordInfo: {
+      //   name: '',
+      //   interests: [],
+      //   comments: '',
+      //   other: '',
+      //   id: ''
+      // },
+      interests: interests
     }
   },
-  watch: {
-    'scopeData.row': {
-      deep: true,
-      handler: function (row) {
-        this.recordInfo = {
-          name: row.name,
-          interests: row.interests.map(label => this.interests.filter(item => item.text === label)[0].value),
-          comments: row.comments,
-          other: row.other,
-          id: row._id
-        }
+  computed: {
+    recordInfo () {
+      return {
+        name: this.scopeData.row.name,
+        interests: this.scopeData.row.interests.map(label => this.interests.filter(item => item.text === label)[0].value),
+        comments: this.scopeData.row.comments,
+        other: this.scopeData.row.other,
+        id: this.scopeData.row._id
       }
     }
   },
+  // watch: {
+  //   'scopeData.row': {
+  //     deep: true,
+  //     handler: function (row) {
+  //       this.recordInfo = {
+  //         name: row.name,
+  //         interests: row.interests.map(label => this.interests.filter(item => item.text === label)[0].value),
+  //         comments: row.comments,
+  //         other: row.other,
+  //         id: row._id
+  //       }
+  //     }
+  //   }
+  // },
   mounted () {
+    console.log(this.recordInfo.interests)
+    debugger
   },
   methods: {
     modify () {
       this.loading.modify = true
       const data = Object.assign({}, this.recordInfo, {
-        interests: this.recordInfo.interests.map(v => this.interests.filter(item => item.value === v)[0].label)
+        interests: this.recordInfo.interests.map(v => this.interests.filter(item => item.value === v)[0].text)
       })
       axios.put('/record/update', data)
         .then(() => {

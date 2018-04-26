@@ -80,8 +80,6 @@ export default {
   //   }
   // },
   mounted () {
-    console.log(this.recordInfo.interests)
-    debugger
   },
   methods: {
     modify () {

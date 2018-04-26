@@ -19,12 +19,32 @@ export default {
     return {
       references: [
         {
-          link: 'http://www.baidu.com',
-          label: '百度'
+          link: 'https://www.yiibai.com/mongodb/mongodb_quick_guide.html',
+          label: 'MongoDB快速入门'
         },
         {
-          link: 'http://www.163.com',
-          label: '网易'
+          link: 'http://mongoosejs.com/docs/guide.html',
+          label: 'MongooseAPI'
+        },
+        {
+          link: 'https://www.cnblogs.com/zhongweiv/p/mongoose.html#mg_update',
+          label: 'Mongoose介绍和入门'
+        },
+        {
+          link: 'http://ourjs.com/detail/53ad24edb984bb4659000013',
+          label: 'Mongoose学习参考文档'
+        },
+        {
+          link: 'https://mp.weixin.qq.com/s/4btZvc9YpIRGLIOFU4Dyyg',
+          label: 'MongoDB初见指南（部分原理）'
+        },
+        {
+          link: 'https://draveness.me/mongodb-wiredtiger?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io',
+          label: '浅入浅出MongoDB 和 WiredTiger'
+        },
+        {
+          link: 'https://yq.aliyun.com/articles/64352?spm=5176.8091938.0.0.oAHbxp',
+          label: 'MongoDB应用'
         }
       ]
     }

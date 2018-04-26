@@ -7,7 +7,6 @@ var recordSchema = new schema({
   interests: [String],
   comments: String,
   other: String,
-  name: String,
   createTime: {
     type: Date,
     default: Date.now

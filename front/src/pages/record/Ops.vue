@@ -63,6 +63,17 @@ export default {
       id: this.scopeData.row._id
     }
   },
+  watch: {
+    'scopeData.row._id' () {
+      this.recordInfo = {
+        name: this.scopeData.row.name,
+        interests: this.scopeData.row.interests.map(label => this.interests.filter(item => item.text === label)[0].value),
+        comments: this.scopeData.row.comments,
+        other: this.scopeData.row.other,
+        id: this.scopeData.row._id
+      }
+    }
+  },
   methods: {
     modify () {
       this.loading.modify = true

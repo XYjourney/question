@@ -279,6 +279,7 @@ export default {
     },
 
     refresh: function () {
+      debugger
       this.getTableData()
     },
 

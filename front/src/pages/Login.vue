@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <el-card class="box-card">
-      <div slot="header" class="clearfix">
-        <span>小调查后台</span>
+      <div slot="header" style="text-align:center">
+        <span>小问卷后台</span>
       </div>
       <el-form :model="userInfo" :rules="rules" ref="loginForm" label-width="100px" >
         <el-form-item label="用户名" prop="username">
@@ -12,7 +12,7 @@
           <el-input type="password" v-model="userInfo.password"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="login">登陆</el-button>
+          <el-button type="primary" @click="login">登录</el-button>
           <el-button @click="resetForm">重置</el-button>
         </el-form-item>
       </el-form>

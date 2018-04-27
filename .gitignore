@@ -1,4 +1,5 @@
 node_modules/
+logs/
 public/
 .vscode/
 front/node_modules/
